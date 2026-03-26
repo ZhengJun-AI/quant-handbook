@@ -6,6 +6,24 @@
 
 ---
 
+## 📊 学习路径总览
+
+```mermaid
+graph LR
+    A[Part 1<br/>理论基础<br/>Days 1-15] --> B[Part 2<br/>经典因子<br/>Days 16-40]
+    B --> C[Part 3<br/>现代扩展<br/>Days 41-65]
+    C --> D[Part 4<br/>多因子组合<br/>Days 66-85]
+    D --> E[Part 5<br/>实战前沿<br/>Days 86-100]
+
+    style A fill:#e1f5ff,stroke:#01579b,stroke-width:2px
+    style B fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    style C fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style D fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style E fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+```
+
+---
+
 ## 手册结构
 
 ### Part 1: 传统量化基础（Days 1-15）
@@ -60,24 +78,136 @@
 
 ---
 
-## 如何使用本手册
+## 📈 五大因子收益特征对比
 
-1. **每日学习**：建议每天投入1-2小时，完成一个主题的深度学习
-2. **思考与实践**：每个章节后都有思考题，鼓励结合A股实盘数据验证
-3. **构建体系**：不要孤立看待每个因子，要理解它们之间的关系
-4. **持续更新**：量化领域发展迅速，保持对学术前沿的关注
+```mermaid
+xychart-beta
+    title "经典因子长期年化超额收益（1926-2020）"
+    x-axis ["价值", "规模", "动量", "质量", "低波动"]
+    y-axis "年化超额收益(%)" 0 --> 5
+    bar [3.4, 2.2, 6.5, 3.2, 2.8]
+
+    annotation 0, 3.4 "HML"
+    annotation 1, 2.2 "SMB"
+    annotation 2, 6.5 "MOM"
+    annotation 3, 3.2 "RMW"
+    annotation 4, 2.8 "BAB"
+```
+
+| 因子 | 年化超额 | 波动率 | 夏普比率 | 最大回撤 |
+|------|----------|--------|----------|----------|
+| **价值 (HML)** | 3.4% | 12% | 0.28 | -35% |
+| **规模 (SMB)** | 2.2% | 10% | 0.22 | -25% |
+| **动量 (MOM)** | 6.5% | 18% | 0.36 | -55% |
+| **质量 (RMW)** | 3.2% | 8% | 0.40 | -15% |
+| **低波动 (BAB)** | 2.8% | 11% | 0.25 | -20% |
+
+> 💡 **洞察**：动量因子收益最高但波动最大；质量因子夏普比率最优；价值因子回撤期最长。
 
 ---
 
-## 推荐延伸阅读
+## 🔄 因子演进时间线
 
-- 学术期刊：*Journal of Finance*, *Journal of Financial Economics*, *Review of Financial Studies*
-- 行业报告：AQR、Two Sigma、WorldQuant的研究论文
-- 经典书籍：
-  - 《主动投资组合管理》(Grinold & Kahn)
-  - 《量化投资策略》(Edward Qian)
-  - 《因子投资》(Andrew Ang)
+```mermaid
+timeline
+    title 量化因子发展历史
+    1960s : CAPM模型<br/>Sharpe, Lintner
+    1970s : EMH理论<br/>Fama : 有效市场假说
+    1980s : 规模效应<br/>Banz(1981) : 三因子模型雏形
+    1990s : Fama-French三因子<br/>(1993) : 动量效应<br/>Jegadeesh & Titman(1993)
+    2000s : 质量因子<br/>Sloan(1996) : 低波动异象<br/>Ang et al.(2006)
+    2010s : Fama-French五因子<br/>(2015) : 机器学习因子
+    2020s : 另类数据爆发 : 深度学习应用
+```
 
 ---
 
-*本手册为学习笔记性质，不构成投资建议。量化投资有风险，历史表现不代表未来收益。*
+## 🎯 如何使用本手册
+
+### 学习阶段规划
+
+```mermaid
+graph TD
+    A[开始] --> B{基础测试}
+    B -->|通过| C[Part 1-2<br/>理论学习<br/>30天]
+    B -->|需补充| D[先修金融基础]
+    D --> C
+    C --> E[Part 3<br/>现代方法<br/>25天]
+    E --> F[Part 4<br/>组合构建<br/>20天]
+    F --> G[Part 5<br/>实战演练<br/>15天]
+    G --> H[完成]
+
+    style A fill:#e8f5e9
+    style H fill:#ffebee
+    style C fill:#e1f5ff
+    style E fill:#f3e5f5
+    style F fill:#fff3e0
+    style G fill:#ffebee
+```
+
+### 每日学习流程
+
+```
+┌─────────────────────────────────────┐
+│  1. 阅读当日内容 (30-45分钟)         │
+├─────────────────────────────────────┤
+│  2. 理解核心概念和图表 (15-20分钟)   │
+├─────────────────────────────────────┤
+│  3. 运行代码示例实践 (20-30分钟)     │
+├─────────────────────────────────────┤
+│  4. 完成思考题 (10-15分钟)           │
+├─────────────────────────────────────┤
+│  5. 记录学习笔记 (10分钟)            │
+└─────────────────────────────────────┘
+                ↓
+         [标记完成 ✓]
+```
+
+---
+
+## 📚 推荐延伸阅读
+
+### 学术期刊
+- *Journal of Finance* - 金融顶级期刊
+- *Journal of Financial Economics* - 理论与实证并重
+- *Review of Financial Studies* - 高质量金融研究
+- *Journal of Portfolio Management* - 实务导向
+
+### 行业报告与机构
+- **AQR** (Cliff Asness) - 因子投资先驱
+- **Two Sigma** - 量化对冲基金研究
+- **WorldQuant** - 因子挖掘方法论
+- **Research Affiliates** - 资产配置研究
+
+### 经典书籍
+| 书名 | 作者 | 难度 | 核心内容 |
+|------|------|------|----------|
+| 《主动投资组合管理》 | Grinold & Kahn | ⭐⭐⭐⭐⭐ | 量化投资圣经 |
+| 《量化投资策略》 | Edward Qian | ⭐⭐⭐⭐ | 因子策略系统介绍 |
+| 《因子投资》 | Andrew Ang | ⭐⭐⭐ | 因子理论与实践 |
+| 《量化交易》 | Ernest Chan | ⭐⭐⭐ | 实操指南 |
+| 《证券分析》 | Graham & Dodd | ⭐⭐⭐⭐ | 价值投资源头 |
+
+---
+
+## ⚠️ 免责声明
+
+*本手册为学习笔记性质，仅供教育交流使用。*
+
+**量化投资风险提示**：
+- 历史表现不代表未来收益
+- 因子有效性可能随时间衰减
+- 任何投资策略都有风险
+- 不构成具体的投资建议
+
+---
+
+## 🤝 参与贡献
+
+欢迎通过以下方式参与：
+- 提交 Issue 报告错误
+- 提交 PR 完善内容
+- 分享学习心得
+- 提出改进建议
+
+**License**: MIT License
